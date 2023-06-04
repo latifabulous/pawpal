@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		457FE2F22A2CD27800641E37 /* AssumptionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457FE2F12A2CD27800641E37 /* AssumptionScreen.swift */; };
 		52B89E032A2CCA970011D55D /* pawpalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B89E022A2CCA970011D55D /* pawpalApp.swift */; };
 		52B89E052A2CCA970011D55D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B89E042A2CCA970011D55D /* ContentView.swift */; };
 		52B89E072A2CCA980011D55D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B89E062A2CCA980011D55D /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		457FE2F12A2CD27800641E37 /* AssumptionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssumptionScreen.swift; sourceTree = "<group>"; };
 		52B89DFF2A2CCA970011D55D /* pawpal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pawpal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B89E022A2CCA970011D55D /* pawpalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pawpalApp.swift; sourceTree = "<group>"; };
 		52B89E042A2CCA970011D55D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 		52B89E012A2CCA970011D55D /* pawpal */ = {
 			isa = PBXGroup;
 			children = (
+				457FE2F12A2CD27800641E37 /* AssumptionScreen.swift */,
 				52B89E022A2CCA970011D55D /* pawpalApp.swift */,
 				52B89E042A2CCA970011D55D /* ContentView.swift */,
 				52B89E062A2CCA980011D55D /* Assets.xcassets */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				457FE2F22A2CD27800641E37 /* AssumptionScreen.swift in Sources */,
 				52B89E052A2CCA970011D55D /* ContentView.swift in Sources */,
 				52B89E032A2CCA970011D55D /* pawpalApp.swift in Sources */,
 			);
