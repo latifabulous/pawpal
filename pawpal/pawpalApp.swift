@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct pawpalApp: App {
+    @StateObject var modelView = ModelView()
+    
     var body: some Scene {
         WindowGroup {
-            OnboardingScreen()
+            FinalView()
+                .environmentObject(modelView)
         }
     }
 }
