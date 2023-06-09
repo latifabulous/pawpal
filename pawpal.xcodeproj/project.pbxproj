@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		457FE2F22A2CD27800641E37 /* AssumptionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457FE2F12A2CD27800641E37 /* AssumptionScreen.swift */; };
-		5256DAE32A3231160018AF56 /* DecisionTreeModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5256DAE22A3231160018AF56 /* DecisionTreeModel.mlmodel */; };
-		5256DAE52A32316C0018AF56 /* MlModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256DAE42A32316C0018AF56 /* MlModel.swift */; };
+		5278848A2A338EB900DFB907 /* pawpal.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 527884892A338EB900DFB907 /* pawpal.mlmodel */; };
+		5278848C2A339E8A00DFB907 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5278848B2A339E8A00DFB907 /* model.swift */; };
 		52B89E032A2CCA970011D55D /* pawpalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B89E022A2CCA970011D55D /* pawpalApp.swift */; };
 		52B89E052A2CCA970011D55D /* OnboardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B89E042A2CCA970011D55D /* OnboardingScreen.swift */; };
 		52B89E072A2CCA980011D55D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B89E062A2CCA980011D55D /* Assets.xcassets */; };
@@ -18,8 +18,8 @@
 
 /* Begin PBXFileReference section */
 		457FE2F12A2CD27800641E37 /* AssumptionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssumptionScreen.swift; sourceTree = "<group>"; };
-		5256DAE22A3231160018AF56 /* DecisionTreeModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DecisionTreeModel.mlmodel; sourceTree = "<group>"; };
-		5256DAE42A32316C0018AF56 /* MlModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MlModel.swift; sourceTree = "<group>"; };
+		527884892A338EB900DFB907 /* pawpal.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = pawpal.mlmodel; sourceTree = "<group>"; };
+		5278848B2A339E8A00DFB907 /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
 		52B89DFF2A2CCA970011D55D /* pawpal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pawpal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B89E022A2CCA970011D55D /* pawpalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pawpalApp.swift; sourceTree = "<group>"; };
 		52B89E042A2CCA970011D55D /* OnboardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreen.swift; sourceTree = "<group>"; };
@@ -41,7 +41,7 @@
 		52B89DF62A2CCA970011D55D = {
 			isa = PBXGroup;
 			children = (
-				5256DAE42A32316C0018AF56 /* MlModel.swift */,
+				5278848B2A339E8A00DFB907 /* model.swift */,
 				52B89E012A2CCA970011D55D /* pawpal */,
 				52B89E002A2CCA970011D55D /* Products */,
 			);
@@ -62,7 +62,7 @@
 				52B89E042A2CCA970011D55D /* OnboardingScreen.swift */,
 				52B89E022A2CCA970011D55D /* pawpalApp.swift */,
 				52B89E062A2CCA980011D55D /* Assets.xcassets */,
-				5256DAE22A3231160018AF56 /* DecisionTreeModel.mlmodel */,
+				527884892A338EB900DFB907 /* pawpal.mlmodel */,
 				52B89E082A2CCA980011D55D /* Preview Content */,
 			);
 			path = pawpal;
@@ -146,11 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5256DAE32A3231160018AF56 /* DecisionTreeModel.mlmodel in Sources */,
 				457FE2F22A2CD27800641E37 /* AssumptionScreen.swift in Sources */,
+				5278848A2A338EB900DFB907 /* pawpal.mlmodel in Sources */,
 				52B89E052A2CCA970011D55D /* OnboardingScreen.swift in Sources */,
-				5256DAE52A32316C0018AF56 /* MlModel.swift in Sources */,
 				52B89E032A2CCA970011D55D /* pawpalApp.swift in Sources */,
+				5278848C2A339E8A00DFB907 /* model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
