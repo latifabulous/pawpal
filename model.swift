@@ -27,6 +27,39 @@ struct DismissButton: View {
     }
 }
 
+struct OptionButton: View {
+    var pilihan: String
+//    var action: (String) -> Void
+
+    @State private var selectedPilihan: String = ""
+    
+    var body: some View {
+        Button(action: {
+            selectedPilihan = pilihan
+//            action(pilihan)
+        }, label: {
+            Text(pilihan)
+                .foregroundColor(selectedPilihan == pilihan ? .white : .black)
+                .padding()
+                .background(selectedPilihan == pilihan ? Color.blue : Color.clear)
+                .cornerRadius(10)
+        })
+        
+    }
+}
+
+struct PopoverButtonStyle: ButtonStyle {
+    var isActive: Bool
+    
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .padding()
+            .background(isActive ? Color.blue : Color.clear)
+            .foregroundColor(isActive ? .white : .black)
+            .cornerRadius(5)
+    }
+}
+
 struct EntryDataView: View {
     @EnvironmentObject var modelView: ModelView
 
@@ -244,100 +277,67 @@ struct Pilihan: View {
             Button(action: {
                 selectedPilihan = pilihan1
                 action(pilihan1)
-            }, label: {
+            }) {
                 Text(pilihan1)
-                    .foregroundColor(selectedPilihan == pilihan1 ? .white : .black)
-                    .padding()
-                    .background(selectedPilihan == pilihan1 ? Color.blue : Color.clear)
-                    .cornerRadius(10)
-            })
-
+            }
+            .buttonStyle(PopoverButtonStyle(isActive: selectedPilihan == pilihan1))
             
-
             Button(action: {
                 selectedPilihan = pilihan2
                 action(pilihan2)
-            }, label: {
+            }) {
                 Text(pilihan2)
-                    .foregroundColor(selectedPilihan == pilihan2 ? .white : .black)
-                    .padding()
-                    .background(selectedPilihan == pilihan2 ? Color.blue : Color.clear)
-                    .cornerRadius(10)
-            })
+            }
+            .buttonStyle(PopoverButtonStyle(isActive: selectedPilihan == pilihan2))
             
-            
-
             Button(action: {
                 selectedPilihan = pilihan3
                 action(pilihan3)
-            }, label: {
+            }) {
                 Text(pilihan3)
-                    .foregroundColor(selectedPilihan == pilihan3 ? .white : .black)
-                    .padding()
-                    .background(selectedPilihan == pilihan3 ? Color.blue : Color.clear)
-                    .cornerRadius(10)
-            })
+            }
+            .buttonStyle(PopoverButtonStyle(isActive: selectedPilihan == pilihan3))
             
-            
-
             Button(action: {
                 selectedPilihan = pilihan4
                 action(pilihan4)
-            }, label: {
+            }) {
                 Text(pilihan4)
-                    .foregroundColor(selectedPilihan == pilihan4 ? .white : .black)
-                    .padding()
-                    .background(selectedPilihan == pilihan4 ? Color.blue : Color.clear)
-                    .cornerRadius(10)
-            })
+            }
+            .buttonStyle(PopoverButtonStyle(isActive: selectedPilihan == pilihan4))
             
-            
-
             Button(action: {
                 selectedPilihan = pilihan5
                 action(pilihan5)
-            }, label: {
+            }) {
                 Text(pilihan5)
-                    .foregroundColor(selectedPilihan == pilihan5 ? .white : .black)
-                    .padding()
-                    .background(selectedPilihan == pilihan5 ? Color.blue : Color.clear)
-                    .cornerRadius(10)
-            })
+            }
+            .buttonStyle(PopoverButtonStyle(isActive: selectedPilihan == pilihan5))
             
             Button(action: {
                 selectedPilihan = pilihan6
                 action(pilihan6)
-            }, label: {
+            }) {
                 Text(pilihan6)
-                    .foregroundColor(selectedPilihan == pilihan6 ? .white : .black)
-                    .padding()
-                    .background(selectedPilihan == pilihan6 ? Color.blue : Color.clear)
-                    .cornerRadius(10)
-            })
-            
+            }
+            .buttonStyle(PopoverButtonStyle(isActive: selectedPilihan == pilihan6))
             
             Button(action: {
                 selectedPilihan = pilihan7
                 action(pilihan7)
-            }, label: {
+            }) {
                 Text(pilihan7)
-                    .foregroundColor(selectedPilihan == pilihan7 ? .white : .black)
-                    .padding()
-                    .background(selectedPilihan == pilihan7 ? Color.blue : Color.clear)
-                    .cornerRadius(10)
-            })
+            }
+            .buttonStyle(PopoverButtonStyle(isActive: selectedPilihan == pilihan7))
             
             Button(action: {
                 selectedPilihan = pilihan8
                 action(pilihan8)
-            }, label: {
+            }) {
                 Text(pilihan8)
-                    .foregroundColor(selectedPilihan == pilihan8 ? .white : .black)
-                    .padding()
-                    .background(selectedPilihan == pilihan8 ? Color.blue : Color.clear)
-                    .cornerRadius(10)
-            })
-            
+            }
+            .buttonStyle(PopoverButtonStyle(isActive: selectedPilihan == pilihan8))
+
         }
     }
 }
@@ -426,6 +426,7 @@ struct FinalView_Previews: PreviewProvider {
             .environmentObject(modelView)
     }
 }
+
 
 
 
