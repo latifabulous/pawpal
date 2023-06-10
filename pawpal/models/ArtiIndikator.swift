@@ -204,3 +204,47 @@ enum KondisiTelinga: CustomStringConvertible {
 }
 
 
+enum KondisiKebutuhan: CustomStringConvertible {
+    case marah
+    case bosan
+    case lapar
+    case butuhPerhatian
+    case sakit
+    case takut
+    
+    init(selectedKebutuhan: String) {
+        switch selectedKebutuhan {
+        case "Marah":
+            self = .marah
+        case "Bosan":
+            self = .bosan
+        case "Lapar":
+            self = .lapar
+        case "Butuh perhatian":
+            self = .butuhPerhatian
+        case "Sakit":
+            self = .sakit
+        case "Takut":
+            self = .takut
+        default:
+            self = .takut
+        }
+    }
+    
+    var description: String {
+        switch self {
+        case .marah:
+            return "1Kebutuhan yang terpilih adalah besar yang bulat"
+        case .bosan:
+            return "2Kebutuhan yang terpilih menandakan kasih sayang"
+        case .lapar:
+            return "3Kebutuhan ini menandakan kesakitan"
+        case .butuhPerhatian:
+            return "4Kebutuhan yang terpilih adalah besar yang bulat"
+        case .sakit:
+            return "5Kebutuhan yang terpilih menandakan kasih sayang"
+        case .takut:
+            return "6Kebutuhan ini menandakan kesakitan"
+        }
+    }
+}

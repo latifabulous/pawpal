@@ -57,7 +57,7 @@ class ModelView: ObservableObject {
             let prediction = try model.prediction(input: modelInput)
             let output = prediction.classLabel
 
-            predictionResult = "Prediksi kebutuhan kucing: \(output)"
+            predictionResult = "\(output)"
             print("Prediksi kebutuhan kucing: \(output)")
         } catch {
             predictionResult = "Error: \(error)"
