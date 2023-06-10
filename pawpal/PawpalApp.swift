@@ -9,18 +9,18 @@ import SwiftUI
 
 @main
 struct pawpalApp: App {
-//    @StateObject var modelView = ModelView()
-//
-//    var body: some Scene {
-//        WindowGroup {
-//            Save()
-//                .environmentObject(modelView)
-//        }
-//    }
-    
+    @StateObject var modelView = ModelView()
+
     var body: some Scene {
         WindowGroup {
-            OnboardingScreen()
+            Save()
+                .environmentObject(modelView)
         }
     }
+    
+//    var body: some Scene {
+//        WindowGroup {
+//            OnboardingScreen()
+//        }
+//    }
 }
