@@ -7,14 +7,17 @@
 
 import SwiftUI
 
-struct LogModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+let currentTimeInterval = Date().timeIntervalSince1970
 
-struct LogModel_Previews: PreviewProvider {
-    static var previews: some View {
-        LogModel()
-    }
+struct LogModel: Identifiable {
+    var id = UUID().uuidString
+    var logDate: Date
+    var logNote: String
+    var pupil: String
+    var telinga: String
+    var suara: String
+    var ekor: String
+    var posisi_badan: String
+    var kebutuhan: String
+    var deskripsi: String
 }
