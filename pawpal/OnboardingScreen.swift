@@ -9,9 +9,10 @@ struct OnboardingScreen: View {
     var body: some View {
         Group {
             if hasCompletedOnboarding {
-                DashboardView()
+                LogView()
             } else {
-                OnboardingView()
+//                OnboardingView()
+                LogView()
             }
         }
     }

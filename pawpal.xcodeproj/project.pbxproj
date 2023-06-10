@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		132EAD602A33A486003F3164 /* LogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132EAD5F2A33A486003F3164 /* LogViewModel.swift */; };
+		132EAD642A33A69A003F3164 /* LogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132EAD632A33A69A003F3164 /* LogView.swift */; };
+		132EAD692A33A96F003F3164 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132EAD682A33A96F003F3164 /* Helper.swift */; };
+		132EAD6B2A33AC39003F3164 /* LogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132EAD6A2A33AC39003F3164 /* LogModel.swift */; };
+		132EAD6F2A33B8FF003F3164 /* LineShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132EAD6E2A33B8FF003F3164 /* LineShape.swift */; };
+		132EAD712A3457C5003F3164 /* DynamicFilteredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132EAD702A3457C5003F3164 /* DynamicFilteredView.swift */; };
+		132EAD742A345BEA003F3164 /* PawpalCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 132EAD722A345BEA003F3164 /* PawpalCoreData.xcdatamodeld */; };
 		457FE2F22A2CD27800641E37 /* AssumptionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457FE2F12A2CD27800641E37 /* AssumptionScreen.swift */; };
 		5268A0522A343A46002CCC8E /* ArtiIndikator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5268A0512A343A46002CCC8E /* ArtiIndikator.swift */; };
 		5268A0542A344B30002CCC8E /* AnalysisResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5268A0532A344B30002CCC8E /* AnalysisResult.swift */; };
@@ -21,6 +28,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		132EAD5F2A33A486003F3164 /* LogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewModel.swift; sourceTree = "<group>"; };
+		132EAD632A33A69A003F3164 /* LogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogView.swift; sourceTree = "<group>"; };
+		132EAD682A33A96F003F3164 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		132EAD6A2A33AC39003F3164 /* LogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogModel.swift; sourceTree = "<group>"; };
+		132EAD6E2A33B8FF003F3164 /* LineShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineShape.swift; sourceTree = "<group>"; };
+		132EAD702A3457C5003F3164 /* DynamicFilteredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFilteredView.swift; sourceTree = "<group>"; };
+		132EAD732A345BEA003F3164 /* PawpalCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PawpalCoreData.xcdatamodel; sourceTree = "<group>"; };
 		457FE2F12A2CD27800641E37 /* AssumptionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssumptionScreen.swift; sourceTree = "<group>"; };
 		5268A0512A343A46002CCC8E /* ArtiIndikator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtiIndikator.swift; sourceTree = "<group>"; };
 		5268A0532A344B30002CCC8E /* AnalysisResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisResult.swift; sourceTree = "<group>"; };
@@ -46,6 +60,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		132EAD5E2A33A449003F3164 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				132EAD5F2A33A486003F3164 /* LogViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		132EAD652A33A943003F3164 /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				132EAD682A33A96F003F3164 /* Helper.swift */,
+			);
+			path = helper;
+			sourceTree = "<group>";
+		};
+		13B640102A30DEB60026B2E2 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				132EAD6A2A33AC39003F3164 /* LogModel.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		13B640112A30DEBE0026B2E2 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				13B640132A30DED30026B2E2 /* pages */,
+				13B640122A30DECD0026B2E2 /* components */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		13B640122A30DECD0026B2E2 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				132EAD6E2A33B8FF003F3164 /* LineShape.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		13B640132A30DED30026B2E2 /* pages */ = {
+			isa = PBXGroup;
+			children = (
+				132EAD632A33A69A003F3164 /* LogView.swift */,
+				132EAD702A3457C5003F3164 /* DynamicFilteredView.swift */,
+			);
+			path = pages;
+			sourceTree = "<group>";
+		};
 		52B89DF62A2CCA970011D55D = {
 			isa = PBXGroup;
 			children = (
@@ -70,12 +134,17 @@
 		52B89E012A2CCA970011D55D /* pawpal */ = {
 			isa = PBXGroup;
 			children = (
+				132EAD652A33A943003F3164 /* helper */,
+				132EAD5E2A33A449003F3164 /* viewmodel */,
+				13B640112A30DEBE0026B2E2 /* views */,
+				13B640102A30DEB60026B2E2 /* models */,
 				457FE2F12A2CD27800641E37 /* AssumptionScreen.swift */,
 				52B89E042A2CCA970011D55D /* OnboardingScreen.swift */,
 				52B89E022A2CCA970011D55D /* pawpalApp.swift */,
 				52B89E062A2CCA980011D55D /* Assets.xcassets */,
 				527884892A338EB900DFB907 /* pawpal.mlmodel */,
 				52B89E082A2CCA980011D55D /* Preview Content */,
+				132EAD722A345BEA003F3164 /* PawpalCoreData.xcdatamodeld */,
 			);
 			path = pawpal;
 			sourceTree = "<group>";
@@ -159,6 +228,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				457FE2F22A2CD27800641E37 /* AssumptionScreen.swift in Sources */,
+				132EAD692A33A96F003F3164 /* Helper.swift in Sources */,
+				132EAD642A33A69A003F3164 /* LogView.swift in Sources */,
+				132EAD712A3457C5003F3164 /* DynamicFilteredView.swift in Sources */,
+				132EAD6F2A33B8FF003F3164 /* LineShape.swift in Sources */,
+				132EAD602A33A486003F3164 /* LogViewModel.swift in Sources */,
+				132EAD6B2A33AC39003F3164 /* LogModel.swift in Sources */,
+				52B89E052A2CCA970011D55D /* ContentView.swift in Sources */,
+				52B89E032A2CCA970011D55D /* pawpalApp.swift in Sources */,
+				132EAD742A345BEA003F3164 /* PawpalCoreData.xcdatamodeld in Sources */,
 				5268A0542A344B30002CCC8E /* AnalysisResult.swift in Sources */,
 				5268A0582A3451F4002CCC8E /* IndikatorButtonComponent.swift in Sources */,
 				5268A0562A344E40002CCC8E /* MLModel.swift in Sources */,
@@ -295,7 +373,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"pawpal/Preview Content\"";
-				DEVELOPMENT_TEAM = 3T4FUBV68T;
+				DEVELOPMENT_TEAM = MYL47LDKG8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -308,7 +386,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.shopia.pawpal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.latifa.pawpal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -324,7 +402,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"pawpal/Preview Content\"";
-				DEVELOPMENT_TEAM = 3T4FUBV68T;
+				DEVELOPMENT_TEAM = MYL47LDKG8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -337,7 +415,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.shopia.pawpal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.latifa.pawpal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -367,6 +445,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		132EAD722A345BEA003F3164 /* PawpalCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				132EAD732A345BEA003F3164 /* PawpalCoreData.xcdatamodel */,
+			);
+			currentVersion = 132EAD732A345BEA003F3164 /* PawpalCoreData.xcdatamodel */;
+			path = PawpalCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 52B89DF72A2CCA970011D55D /* Project object */;
 }
