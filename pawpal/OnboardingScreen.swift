@@ -2,7 +2,7 @@ import SwiftUI
 
 let totalPage = 3
 
-struct ContentView: View {
+struct OnboardingScreen: View {
     @AppStorage("hasCompletedOnboarding")
     var hasCompletedOnboarding = false
     
@@ -42,6 +42,7 @@ struct OnboardingView: View {
     var username = ""
     
     @State private var currentPage = 1
+    @State private var isUsernameEmpty = true
 //    @State private var umur = ""
     
     var body: some View {
@@ -53,7 +54,7 @@ struct OnboardingView: View {
             } else if currentPage == 3 {
                 OnboardingInfo(image: "☄️", title: "Minum", description: "lallala", background: "OnBoarding1", currentPage: $currentPage)
             } else if currentPage == 4 {
-                NameInputView(currentPage: $currentPage, username: $username, background: "OnBoarding2")
+                NameInputView(currentPage: $currentPage, username: $username, isUsernameEmpty: $isUsernameEmpty, background: "OnBoarding2")
             } else if currentPage == 5 {
                 AgeInputView (currentPage: $currentPage, username: $username, background: "OnBoarding2")
             }
@@ -133,6 +134,7 @@ struct OnboardingInfo: View {
 struct NameInputView: View {
     @Binding var currentPage: Int
     @Binding var username: String
+    @Binding var isUsernameEmpty: Bool
     
     var background: String
     
@@ -164,18 +166,26 @@ struct NameInputView: View {
                 TextField("Nama kucing", text: $username)
                     .font(.system(size: 28, weight: .semibold, design: .rounded))
                     .foregroundColor(Color("Orange600"))
-                
+                    .onChange(of: username) { newValue in
+                            isUsernameEmpty = newValue.isEmpty
+                        }
+           
                 Spacer()
                 
                 Button(action: {
-                    currentPage = 5
+                    if isUsernameEmpty {
+                            // Menampilkan peringatan jika nama kosong
+                            // Atau melakukan tindakan lain sesuai kebutuhan
+                    } else {
+                        currentPage = 5
+                    }
                 }, label: {
                     Text("Selanjutnya")
                         .font(.system(size: 17, weight: .semibold, design: .rounded))
                         .foregroundColor(.white)
                 })
                 .frame(maxWidth: 342, maxHeight: 56)
-                .background(Color("Orange600"))
+                .background(isUsernameEmpty ? Color("Orange400") : Color ("Orange600"))
                 .cornerRadius(20)
             }
             .padding(.horizontal, 20)
@@ -301,6 +311,7 @@ struct OptionView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        OnboardingScreen()
     }
 }
+
