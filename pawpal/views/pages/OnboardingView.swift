@@ -4,15 +4,14 @@ let totalPage = 3
 
 struct OnboardingScreen: View {
     @AppStorage("hasCompletedOnboarding")
-    var hasCompletedOnboarding = false
+    var hasCompletedOnboarding = true
     
     var body: some View {
         Group {
             if hasCompletedOnboarding {
                 LogView()
             } else {
-//                OnboardingView()
-                LogView()
+                OnboardingView()
             }
         }
     }
@@ -38,30 +37,27 @@ struct DashboardView: View {
 }
 
 struct OnboardingView: View {
+
     @AppStorage("username")
     var username = ""
     
     @State private var currentPage = 1
     @State private var isUsernameEmpty = true
-//    @State private var umur = ""
+
     
     var body: some View {
         VStack {
             if currentPage == 1 {
-                OnboardingInfo(image: "🥰", title: "Makanan", description: "lallala", background: "OnBoarding1", currentPage: $currentPage)
+                OnboardingInfo(image: "onboarding", title: "Makanan", description: "lallala", background: "onboarding-1", currentPage: $currentPage)
             } else if currentPage == 2 {
-                OnboardingInfo(image: "🥲", title: "Lapar", description: "lallala", background: "OnBoarding1", currentPage: $currentPage)
+                OnboardingInfo(image: "onboarding-1", title: "Lapar", description: "lallala", background: "onboarding-2", currentPage: $currentPage)
             } else if currentPage == 3 {
-                OnboardingInfo(image: "☄️", title: "Minum", description: "lallala", background: "OnBoarding1", currentPage: $currentPage)
+                OnboardingInfo(image: "onboarding-2", title: "Minum", description: "lallala", background: "onboarding-1", currentPage: $currentPage)
             } else if currentPage == 4 {
-                NameInputView(currentPage: $currentPage, username: $username, isUsernameEmpty: $isUsernameEmpty, background: "OnBoarding2")
+                NameInputView(currentPage: $currentPage, username: $username, isUsernameEmpty: $isUsernameEmpty, background: "onboarding-2")
             } else if currentPage == 5 {
-                AgeInputView (currentPage: $currentPage, username: $username, background: "OnBoarding2")
+                AgeInputView (currentPage: $currentPage, username: $username, background: "onboarding-2")
             }
-            
-//            else if currentPage == 5 {
-//                AgeInputView(umur: $umur, currentPage: $currentPage, username: $username, background: "OnBoarding2")
-//            }
         }
         .onDisappear {
             UserDefaults.standard.set(currentPage, forKey: "currentPage")
@@ -84,21 +80,21 @@ struct OnboardingInfo: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
-                HStack {
-                    if currentPage == 1 {
-                        Color(.blue).frame(height: 8 / UIScreen.main.scale)
-                        Color(.gray).frame(height: 8 / UIScreen.main.scale)
-                        Color(.gray).frame(height: 8 / UIScreen.main.scale)
-                    } else if currentPage == 2 {
-                        Color(.gray).frame(height: 8 / UIScreen.main.scale)
-                        Color(.blue).frame(height: 8 / UIScreen.main.scale)
-                        Color(.gray).frame(height: 8 / UIScreen.main.scale)
-                    } else if currentPage == 3 {
-                        Color(.gray).frame(height: 8 / UIScreen.main.scale)
-                        Color(.gray).frame(height: 8 / UIScreen.main.scale)
-                        Color(.blue).frame(height: 8 / UIScreen.main.scale)
-                    }
-                }
+//                HStack {
+//                    if currentPage == 1 {
+//                        Color(.blue).frame(height: 8 / UIScreen.main.scale)
+//                        Color(.gray).frame(height: 8 / UIScreen.main.scale)
+//                        Color(.gray).frame(height: 8 / UIScreen.main.scale)
+//                    } else if currentPage == 2 {
+//                        Color(.gray).frame(height: 8 / UIScreen.main.scale)
+//                        Color(.blue).frame(height: 8 / UIScreen.main.scale)
+//                        Color(.gray).frame(height: 8 / UIScreen.main.scale)
+//                    } else if currentPage == 3 {
+//                        Color(.gray).frame(height: 8 / UIScreen.main.scale)
+//                        Color(.gray).frame(height: 8 / UIScreen.main.scale)
+//                        Color(.blue).frame(height: 8 / UIScreen.main.scale)
+//                    }
+//                }
                 
                 Button(action: {
                     currentPage = 4
@@ -147,9 +143,9 @@ struct NameInputView: View {
             
             VStack {
                 HStack {
-                    Color("Orange600").frame(height: 10 / UIScreen.main.scale)
+                    Color("orange600").frame(height: 10 / UIScreen.main.scale)
                         .cornerRadius(20)
-                    Color("Orange400").frame(height: 10 / UIScreen.main.scale)
+                    Color("orange400").frame(height: 10 / UIScreen.main.scale)
                         .cornerRadius(20)
                 }
                 
@@ -165,7 +161,7 @@ struct NameInputView: View {
                 
                 TextField("Nama kucing", text: $username)
                     .font(.system(size: 28, weight: .semibold, design: .rounded))
-                    .foregroundColor(Color("Orange600"))
+                    .foregroundColor(Color("orange600"))
                     .onChange(of: username) { newValue in
                             isUsernameEmpty = newValue.isEmpty
                         }
@@ -185,7 +181,7 @@ struct NameInputView: View {
                         .foregroundColor(.white)
                 })
                 .frame(maxWidth: 342, maxHeight: 56)
-                .background(isUsernameEmpty ? Color("Orange400") : Color ("Orange600"))
+                .background(isUsernameEmpty ? Color("orange400") : Color ("orange600"))
                 .cornerRadius(20)
             }
             .padding(.horizontal, 20)
@@ -196,7 +192,7 @@ struct NameInputView: View {
 }
 
 struct AgeInputView: View {
-//    @Binding var umur: String
+    
     @Binding var currentPage: Int
     @Binding var username: String
     @AppStorage("selectedAge") var selectedAge: String = ""
@@ -212,9 +208,9 @@ struct AgeInputView: View {
             
             VStack {
                 HStack {
-                    Color("Orange400").frame(height: 10 / UIScreen.main.scale)
+                    Color("orange400").frame(height: 10 / UIScreen.main.scale)
                         .cornerRadius(20)
-                    Color("Orange600").frame(height: 10 / UIScreen.main.scale)
+                    Color("orange600").frame(height: 10 / UIScreen.main.scale)
                         .cornerRadius(20)
                 }
                 
@@ -224,18 +220,7 @@ struct AgeInputView: View {
                 Text("Berapa umur \(username)?")
                     .font(.system(size: 28, weight: .bold, design: .rounded))
                     .frame(maxWidth: .infinity, alignment: .leading)
-                
-//                TextField("Masukkan umur kucingmu", text: $umur)
-//                    .textFieldStyle(RoundedBorderTextFieldStyle())
-//                    .padding()
-                
-//                OptionView(option: "Merah", isSelected: selectedAge == "Merah") {
-//                                selectedAge = "Merah"
-//                            }
-                            
-//                OptionView(option: "Biru", isSelected: selectedAge == "Biru") {
-//                                selectedAge = "Biru"
-//                            }
+
                 Spacer ()
                 
                 HStack {
@@ -270,7 +255,7 @@ struct AgeInputView: View {
                         .foregroundColor(.white)
                 })
                 .frame(maxWidth: 342, maxHeight: 56)
-                .background(Color("Orange600"))
+                .background(Color("orange600"))
                 .cornerRadius(20)
             }
             .padding(.horizontal, 20)
@@ -289,7 +274,7 @@ struct OptionView: View {
     var body: some View {
         Button(action: action) {
             Circle()
-                .stroke(isSelected ? Color("Orange600") : Color("Orange400"), lineWidth: isSelected ? 3 : 1)
+                .stroke(isSelected ? Color("orange600") : Color("orange400"), lineWidth: isSelected ? 3 : 1)
                 .frame(width: 163, height: 163)
                 .overlay(
                     VStack {

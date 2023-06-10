@@ -14,15 +14,16 @@
 		132EAD6F2A33B8FF003F3164 /* LineShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132EAD6E2A33B8FF003F3164 /* LineShape.swift */; };
 		132EAD712A3457C5003F3164 /* DynamicFilteredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132EAD702A3457C5003F3164 /* DynamicFilteredView.swift */; };
 		132EAD742A345BEA003F3164 /* PawpalCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 132EAD722A345BEA003F3164 /* PawpalCoreData.xcdatamodeld */; };
-		457FE2F22A2CD27800641E37 /* AssumptionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457FE2F12A2CD27800641E37 /* AssumptionScreen.swift */; };
+		132EAD762A347835003F3164 /* DismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132EAD752A347835003F3164 /* DismissButton.swift */; };
+		457FE2F22A2CD27800641E37 /* AssumptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457FE2F12A2CD27800641E37 /* AssumptionView.swift */; };
 		5268A0522A343A46002CCC8E /* ArtiIndikator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5268A0512A343A46002CCC8E /* ArtiIndikator.swift */; };
-		5268A0542A344B30002CCC8E /* AnalysisResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5268A0532A344B30002CCC8E /* AnalysisResult.swift */; };
+		5268A0542A344B30002CCC8E /* AnalysisResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5268A0532A344B30002CCC8E /* AnalysisResultView.swift */; };
 		5268A0562A344E40002CCC8E /* MLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5268A0552A344E40002CCC8E /* MLModel.swift */; };
-		5268A0582A3451F4002CCC8E /* IndikatorButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5268A0572A3451F4002CCC8E /* IndikatorButtonComponent.swift */; };
+		5268A0582A3451F4002CCC8E /* IndikatorModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5268A0572A3451F4002CCC8E /* IndikatorModal.swift */; };
 		5278848A2A338EB900DFB907 /* pawpal.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 527884892A338EB900DFB907 /* pawpal.mlmodel */; };
-		5278848C2A339E8A00DFB907 /* IndikatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5278848B2A339E8A00DFB907 /* IndikatorButton.swift */; };
-		52B89E032A2CCA970011D55D /* pawpalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B89E022A2CCA970011D55D /* pawpalApp.swift */; };
-		52B89E052A2CCA970011D55D /* OnboardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B89E042A2CCA970011D55D /* OnboardingScreen.swift */; };
+		5278848C2A339E8A00DFB907 /* EntryIndikatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5278848B2A339E8A00DFB907 /* EntryIndikatorView.swift */; };
+		52B89E032A2CCA970011D55D /* PawpalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B89E022A2CCA970011D55D /* PawpalApp.swift */; };
+		52B89E052A2CCA970011D55D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B89E042A2CCA970011D55D /* OnboardingView.swift */; };
 		52B89E072A2CCA980011D55D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B89E062A2CCA980011D55D /* Assets.xcassets */; };
 		52B89E0A2A2CCA980011D55D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B89E092A2CCA980011D55D /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -35,16 +36,17 @@
 		132EAD6E2A33B8FF003F3164 /* LineShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineShape.swift; sourceTree = "<group>"; };
 		132EAD702A3457C5003F3164 /* DynamicFilteredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFilteredView.swift; sourceTree = "<group>"; };
 		132EAD732A345BEA003F3164 /* PawpalCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PawpalCoreData.xcdatamodel; sourceTree = "<group>"; };
-		457FE2F12A2CD27800641E37 /* AssumptionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssumptionScreen.swift; sourceTree = "<group>"; };
+		132EAD752A347835003F3164 /* DismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissButton.swift; sourceTree = "<group>"; };
+		457FE2F12A2CD27800641E37 /* AssumptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssumptionView.swift; sourceTree = "<group>"; };
 		5268A0512A343A46002CCC8E /* ArtiIndikator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtiIndikator.swift; sourceTree = "<group>"; };
-		5268A0532A344B30002CCC8E /* AnalysisResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisResult.swift; sourceTree = "<group>"; };
+		5268A0532A344B30002CCC8E /* AnalysisResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisResultView.swift; sourceTree = "<group>"; };
 		5268A0552A344E40002CCC8E /* MLModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLModel.swift; sourceTree = "<group>"; };
-		5268A0572A3451F4002CCC8E /* IndikatorButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndikatorButtonComponent.swift; sourceTree = "<group>"; };
+		5268A0572A3451F4002CCC8E /* IndikatorModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndikatorModal.swift; sourceTree = "<group>"; };
 		527884892A338EB900DFB907 /* pawpal.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = pawpal.mlmodel; sourceTree = "<group>"; };
-		5278848B2A339E8A00DFB907 /* IndikatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndikatorButton.swift; sourceTree = "<group>"; };
+		5278848B2A339E8A00DFB907 /* EntryIndikatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryIndikatorView.swift; sourceTree = "<group>"; };
 		52B89DFF2A2CCA970011D55D /* pawpal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pawpal.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		52B89E022A2CCA970011D55D /* pawpalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pawpalApp.swift; sourceTree = "<group>"; };
-		52B89E042A2CCA970011D55D /* OnboardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreen.swift; sourceTree = "<group>"; };
+		52B89E022A2CCA970011D55D /* PawpalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawpalApp.swift; sourceTree = "<group>"; };
+		52B89E042A2CCA970011D55D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		52B89E062A2CCA980011D55D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52B89E092A2CCA980011D55D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,6 +81,8 @@
 		13B640102A30DEB60026B2E2 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				5268A0512A343A46002CCC8E /* ArtiIndikator.swift */,
+				5268A0552A344E40002CCC8E /* MLModel.swift */,
 				132EAD6A2A33AC39003F3164 /* LogModel.swift */,
 			);
 			path = models;
@@ -96,7 +100,9 @@
 		13B640122A30DECD0026B2E2 /* components */ = {
 			isa = PBXGroup;
 			children = (
+				5268A0572A3451F4002CCC8E /* IndikatorModal.swift */,
 				132EAD6E2A33B8FF003F3164 /* LineShape.swift */,
+				132EAD752A347835003F3164 /* DismissButton.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -104,8 +110,12 @@
 		13B640132A30DED30026B2E2 /* pages */ = {
 			isa = PBXGroup;
 			children = (
+				5278848B2A339E8A00DFB907 /* EntryIndikatorView.swift */,
+				5268A0532A344B30002CCC8E /* AnalysisResultView.swift */,
 				132EAD632A33A69A003F3164 /* LogView.swift */,
 				132EAD702A3457C5003F3164 /* DynamicFilteredView.swift */,
+				457FE2F12A2CD27800641E37 /* AssumptionView.swift */,
+				52B89E042A2CCA970011D55D /* OnboardingView.swift */,
 			);
 			path = pages;
 			sourceTree = "<group>";
@@ -113,11 +123,6 @@
 		52B89DF62A2CCA970011D55D = {
 			isa = PBXGroup;
 			children = (
-				5268A0572A3451F4002CCC8E /* IndikatorButtonComponent.swift */,
-				5268A0552A344E40002CCC8E /* MLModel.swift */,
-				5268A0532A344B30002CCC8E /* AnalysisResult.swift */,
-				5268A0512A343A46002CCC8E /* ArtiIndikator.swift */,
-				5278848B2A339E8A00DFB907 /* IndikatorButton.swift */,
 				52B89E012A2CCA970011D55D /* pawpal */,
 				52B89E002A2CCA970011D55D /* Products */,
 			);
@@ -138,9 +143,7 @@
 				132EAD5E2A33A449003F3164 /* viewmodel */,
 				13B640112A30DEBE0026B2E2 /* views */,
 				13B640102A30DEB60026B2E2 /* models */,
-				457FE2F12A2CD27800641E37 /* AssumptionScreen.swift */,
-				52B89E042A2CCA970011D55D /* OnboardingScreen.swift */,
-				52B89E022A2CCA970011D55D /* pawpalApp.swift */,
+				52B89E022A2CCA970011D55D /* PawpalApp.swift */,
 				52B89E062A2CCA980011D55D /* Assets.xcassets */,
 				527884892A338EB900DFB907 /* pawpal.mlmodel */,
 				52B89E082A2CCA980011D55D /* Preview Content */,
@@ -227,23 +230,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				457FE2F22A2CD27800641E37 /* AssumptionScreen.swift in Sources */,
+				457FE2F22A2CD27800641E37 /* AssumptionView.swift in Sources */,
 				132EAD692A33A96F003F3164 /* Helper.swift in Sources */,
 				132EAD642A33A69A003F3164 /* LogView.swift in Sources */,
 				132EAD712A3457C5003F3164 /* DynamicFilteredView.swift in Sources */,
 				132EAD6F2A33B8FF003F3164 /* LineShape.swift in Sources */,
 				132EAD602A33A486003F3164 /* LogViewModel.swift in Sources */,
 				132EAD6B2A33AC39003F3164 /* LogModel.swift in Sources */,
-				52B89E052A2CCA970011D55D /* ContentView.swift in Sources */,
-				52B89E032A2CCA970011D55D /* pawpalApp.swift in Sources */,
+				52B89E052A2CCA970011D55D /* OnboardingView.swift in Sources */,
+				52B89E032A2CCA970011D55D /* PawpalApp.swift in Sources */,
 				132EAD742A345BEA003F3164 /* PawpalCoreData.xcdatamodeld in Sources */,
-				5268A0542A344B30002CCC8E /* AnalysisResult.swift in Sources */,
-				5268A0582A3451F4002CCC8E /* IndikatorButtonComponent.swift in Sources */,
+				5268A0542A344B30002CCC8E /* AnalysisResultView.swift in Sources */,
+				132EAD762A347835003F3164 /* DismissButton.swift in Sources */,
+				5268A0582A3451F4002CCC8E /* IndikatorModal.swift in Sources */,
 				5268A0562A344E40002CCC8E /* MLModel.swift in Sources */,
 				5278848A2A338EB900DFB907 /* pawpal.mlmodel in Sources */,
-				52B89E052A2CCA970011D55D /* OnboardingScreen.swift in Sources */,
-				52B89E032A2CCA970011D55D /* pawpalApp.swift in Sources */,
-				5278848C2A339E8A00DFB907 /* IndikatorButton.swift in Sources */,
+				52B89E052A2CCA970011D55D /* OnboardingView.swift in Sources */,
+				52B89E032A2CCA970011D55D /* PawpalApp.swift in Sources */,
+				5278848C2A339E8A00DFB907 /* EntryIndikatorView.swift in Sources */,
 				5268A0522A343A46002CCC8E /* ArtiIndikator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,22 +7,6 @@
 
 import SwiftUI
 
-struct DismissButton: View {
-    @Binding var isPopoverVisible: Bool
-    
-    var body: some View {
-        Button(action: {
-            isPopoverVisible = false
-        }) {
-            Text("Save")
-                .padding()
-                .background(Color.green)
-                .foregroundColor(.white)
-                .cornerRadius(10)
-        }
-    }
-}
-
 struct PopoverButtonStyle: ButtonStyle {
     var isActive: Bool
     
