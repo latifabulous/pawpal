@@ -13,7 +13,7 @@ struct pawpalApp: App {
     
     var body: some Scene {
         WindowGroup {
-            FinalView()
+            Save()
                 .environmentObject(modelView)
         }
     }
