@@ -15,9 +15,9 @@
 		132EAD712A3457C5003F3164 /* DynamicFilteredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132EAD702A3457C5003F3164 /* DynamicFilteredView.swift */; };
 		132EAD742A345BEA003F3164 /* PawpalCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 132EAD722A345BEA003F3164 /* PawpalCoreData.xcdatamodeld */; };
 		132EAD762A347835003F3164 /* DismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132EAD752A347835003F3164 /* DismissButton.swift */; };
-		450065E72A34BFE300B57A25 /* InformationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450065E62A34BFE200B57A25 /* InformationPage.swift */; };
-		450065EA2A34C02000B57A25 /* ModalList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450065E92A34C02000B57A25 /* ModalList.swift */; };
 		457FE2F22A2CD27800641E37 /* AssumptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457FE2F12A2CD27800641E37 /* AssumptionView.swift */; };
+		45EFE99C2A3620F000D70A73 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EFE99B2A3620F000D70A73 /* InformationView.swift */; };
+		45EFE9A02A3621CB00D70A73 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EFE99F2A3621CB00D70A73 /* Model.swift */; };
 		5268A0522A343A46002CCC8E /* ArtiIndikator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5268A0512A343A46002CCC8E /* ArtiIndikator.swift */; };
 		5268A0542A344B30002CCC8E /* AnalysisResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5268A0532A344B30002CCC8E /* AnalysisResultView.swift */; };
 		5268A0562A344E40002CCC8E /* MLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5268A0552A344E40002CCC8E /* MLModel.swift */; };
@@ -39,9 +39,9 @@
 		132EAD702A3457C5003F3164 /* DynamicFilteredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFilteredView.swift; sourceTree = "<group>"; };
 		132EAD732A345BEA003F3164 /* PawpalCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PawpalCoreData.xcdatamodel; sourceTree = "<group>"; };
 		132EAD752A347835003F3164 /* DismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissButton.swift; sourceTree = "<group>"; };
-		450065E62A34BFE200B57A25 /* InformationPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InformationPage.swift; path = "../../../../pawpal copy/pawpal/InformationPage.swift"; sourceTree = "<group>"; };
-		450065E92A34C02000B57A25 /* ModalList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalList.swift; sourceTree = "<group>"; };
 		457FE2F12A2CD27800641E37 /* AssumptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssumptionView.swift; sourceTree = "<group>"; };
+		45EFE99B2A3620F000D70A73 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
+		45EFE99F2A3621CB00D70A73 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Model.swift; path = ../../Model.swift; sourceTree = "<group>"; };
 		5268A0512A343A46002CCC8E /* ArtiIndikator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtiIndikator.swift; sourceTree = "<group>"; };
 		5268A0532A344B30002CCC8E /* AnalysisResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisResultView.swift; sourceTree = "<group>"; };
 		5268A0552A344E40002CCC8E /* MLModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLModel.swift; sourceTree = "<group>"; };
@@ -119,8 +119,8 @@
 				132EAD632A33A69A003F3164 /* LogView.swift */,
 				132EAD702A3457C5003F3164 /* DynamicFilteredView.swift */,
 				457FE2F12A2CD27800641E37 /* AssumptionView.swift */,
-				450065E62A34BFE200B57A25 /* InformationPage.swift */,
 				52B89E042A2CCA970011D55D /* OnboardingView.swift */,
+				45EFE99B2A3620F000D70A73 /* InformationView.swift */,
 			);
 			path = pages;
 			sourceTree = "<group>";
@@ -128,7 +128,7 @@
 		450065E82A34C02000B57A25 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				450065E92A34C02000B57A25 /* ModalList.swift */,
+				45EFE99F2A3621CB00D70A73 /* Model.swift */,
 			);
 			name = model;
 			path = "../../pawpal copy/model";
@@ -245,7 +245,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				450065EA2A34C02000B57A25 /* ModalList.swift in Sources */,
+				45EFE9A02A3621CB00D70A73 /* Model.swift in Sources */,
+				45EFE99C2A3620F000D70A73 /* InformationView.swift in Sources */,
 				457FE2F22A2CD27800641E37 /* AssumptionView.swift in Sources */,
 				132EAD692A33A96F003F3164 /* Helper.swift in Sources */,
 				132EAD642A33A69A003F3164 /* LogView.swift in Sources */,
@@ -261,7 +262,6 @@
 				5268A0582A3451F4002CCC8E /* IndikatorModal.swift in Sources */,
 				5268A0562A344E40002CCC8E /* MLModel.swift in Sources */,
 				5278848A2A338EB900DFB907 /* pawpal.mlmodel in Sources */,
-				450065E72A34BFE300B57A25 /* InformationPage.swift in Sources */,
 				52B89E052A2CCA970011D55D /* OnboardingView.swift in Sources */,
 				52B89E032A2CCA970011D55D /* PawpalApp.swift in Sources */,
 				5278848C2A339E8A00DFB907 /* EntryIndikatorView.swift in Sources */,
