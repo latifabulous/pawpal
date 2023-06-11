@@ -14,6 +14,8 @@ struct AssumptionScreenView: View {
     @State var isBirahi = false
     @State var isMain = false
     @State var isIstirahat = false
+    @State var isLainnya = false
+//    @State var isModal = false
     
     var body: some View {
         NavigationView{
@@ -32,9 +34,17 @@ struct AssumptionScreenView: View {
                         Text ("Apa yang sedang dilakukan kucing?")
                             .multilineTextAlignment(.leading)
                         
-                        TextField ("Contoh: Menyendiri", text: $text)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                        TextField("Contoh: Menyendiri", text: $text)
+//                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .padding(.horizontal, 20)
                             .frame(width: 345, height: 56)
+                            .foregroundColor(Color("Orange600"))
+                            .background(
+                                RoundedRectangle(cornerRadius: 20)
+                                    .stroke(Color("Orange600"), lineWidth: 1.5)
+                                    .background(Color.white)
+                            )
+
                     }
                     Spacer()
                 }.padding(.leading, 24)
@@ -53,17 +63,18 @@ struct AssumptionScreenView: View {
                                 isBirahi = false
                                 isMain = false
                                 isIstirahat = false
+                                isLainnya = false
                                 
                             }
                         }label: {
                             Text("Makan")
                                 .fontWeight(.medium)
                                 .frame(width: 94, height: 56)
-                                .foregroundColor(isMakan ? .white : Color("Green800"))
+                                .foregroundColor(isMakan ? .white : Color("Orange600"))
                                 .background(
                                     RoundedRectangle(cornerRadius: 20)
-                                        .stroke(Color("Green800"), lineWidth: 3)
-                                        .background(isMakan ? Color("Green800") : .white)
+                                        .stroke(Color("Orange600"), lineWidth: 3)
+                                        .background(isMakan ? Color("Orange600") : .white)
                                 )
                                 .cornerRadius(20)
                         }
@@ -76,17 +87,18 @@ struct AssumptionScreenView: View {
                                 isBirahi = false
                                 isMain = false
                                 isIstirahat = false
+                                isLainnya = false
                                 
                             }
                         }label: {
                             Text("Minum")
                                 .fontWeight(.medium)
                                 .frame(width: 94, height: 56)
-                                .foregroundColor(isMinum ? .white : Color("Green800"))
+                                .foregroundColor(isMinum ? .white : Color("Orange600"))
                                 .background(
                                     RoundedRectangle(cornerRadius: 20)
-                                        .stroke(Color("Green800"), lineWidth: 3)
-                                        .background(isMinum ? Color("Green800") : .white)
+                                        .stroke(Color("Orange600"), lineWidth: 3)
+                                        .background(isMinum ? Color("Orange600") : .white)
                                 )
                                 .cornerRadius(20)
                         }
@@ -98,20 +110,20 @@ struct AssumptionScreenView: View {
                                 isBirahi = true
                                 isMain = false
                                 isIstirahat = false
+                                isLainnya = false
                                 
                             }
                         }label: {
                             Text("Birahi")
                                 .fontWeight(.medium)
                                 .frame(width: 94, height: 56)
-                                .foregroundColor(isBirahi ? .white : Color("Green800"))
+                                .foregroundColor(isBirahi ? .white : Color("Orange600"))
                                 .background(
                                     RoundedRectangle(cornerRadius: 20)
-                                        .stroke(Color("Green800"), lineWidth: 3)
-                                        .background(isBirahi ? Color("Green800") : .white)
+                                        .stroke(Color("Orange600"), lineWidth: 3)
+                                        .background(isBirahi ? Color("Orange600") : .white)
                                 )
                                 .cornerRadius(20)
-                            Spacer()
                         }
                     }
                     HStack{
@@ -122,17 +134,18 @@ struct AssumptionScreenView: View {
                                 isBirahi = false
                                 isMain = true
                                 isIstirahat = false
+                                isLainnya = false
                                 
                             }
                         }label: {
                             Text("Main")
                                 .fontWeight(.medium)
                                 .frame(width: 94, height: 56)
-                                .foregroundColor(isMain ? .white : Color("Green800"))
+                                .foregroundColor(isMain ? .white : Color("Orange600"))
                                 .background(
                                     RoundedRectangle(cornerRadius: 20)
-                                        .stroke(Color("Green800"), lineWidth: 3)
-                                        .background(isMain ? Color("Green800") : .white)
+                                        .stroke(Color("Orange600"), lineWidth: 3)
+                                        .background(isMain ? Color("Orange600") : .white)
                                 )
                                 .cornerRadius(20)
                             
@@ -143,30 +156,47 @@ struct AssumptionScreenView: View {
                                     isBirahi = false
                                     isMain = false
                                     isIstirahat = true
+                                    isLainnya = false
                                     
                                 }
                             }label: {
                                 Text("Istirahat")
                                     .fontWeight(.medium)
                                     .frame(width: 94, height: 56)
-                                    .foregroundColor(isIstirahat ? .white : Color("Green800"))
+                                    .foregroundColor(isIstirahat ? .white : Color("Orange600"))
                                     .background(
                                         RoundedRectangle(cornerRadius: 20)
-                                            .stroke(Color("Green800"), lineWidth: 3)
-                                            .background(isIstirahat ? Color("Green800") : .white)
+                                            .stroke(Color("Orange600"), lineWidth: 3)
+                                            .background(isIstirahat ? Color("Orange600") : .white)
                                     )
                                     .cornerRadius(20)
                                 
                                 
                             }
                             
-                            
-                            
-                            
+                            Button{
+                                if !isLainnya{
+                                    isMakan = false
+                                    isMinum = false
+                                    isBirahi = false
+                                    isMain = false
+                                    isIstirahat = false
+                                    isLainnya = true
+                                    
+                                }
+                            }label: {
+                                Text("Lainnya")
+                                    .fontWeight(.medium)
+                                    .frame(width: 94, height: 56)
+                                    .foregroundColor(isLainnya ? .white : Color("Orange600"))
+                                    .background(
+                                        RoundedRectangle(cornerRadius: 20)
+                                            .stroke(Color("Orange600"), lineWidth: 3)
+                                            .background(isLainnya ? Color("Orange600") : .white)
+                                    )
+                                    .cornerRadius(20)
+                            }
                         }
-                        
-                        Spacer()
-                        
                     }
                     
                     Spacer().frame(height: 40)
@@ -174,12 +204,17 @@ struct AssumptionScreenView: View {
                     
                     
                 }.padding(.horizontal, 24)
-                Text("Cek perilaku")
-                    .fontWeight(.semibold)
-                    .frame(width: 342, height: 56)
-                    .background(RoundedRectangle(cornerRadius: 8)
-                        .foregroundColor(Color("Orange600")))
-                    .foregroundColor(Color.white)
+                Button{
+//                    isModal.toggle()
+                }label: {
+                    Text("Cek perilaku")
+                        .fontWeight(.semibold)
+                        .frame(width: 342, height: 56)
+                        .background(RoundedRectangle(cornerRadius: 8)
+                            .foregroundColor(Color("Green800")))
+                        .foregroundColor(Color.white)
+                }
+                
                 
             }
             .toolbar{
@@ -187,14 +222,17 @@ struct AssumptionScreenView: View {
                     HStack {
                         Image(systemName: "chevron.left")
                             .fontWeight(.medium)
-                            .foregroundColor(Color("Orange600"))
+                            .foregroundColor(Color("Green800"))
                         Text ("Kembali")
                             .fontWeight(.medium)
-                            .foregroundColor(Color("Orange600"))
+                            .foregroundColor(Color("Green800"))
                         Spacer()
                     }
                 }
             }
+//            .sheet(isPresented: $isModal) {
+//                InformationPage()
+//            }
             
         }
         
