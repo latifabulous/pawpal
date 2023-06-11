@@ -23,7 +23,7 @@ struct AssumptionScreenView: View {
                 Spacer().frame(height:14)
                 
                 
-                Image ("CatAssumption")
+                Image ("cat-assumption")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(minWidth: 269, idealWidth: 269, maxWidth: 269, minHeight: 240, idealHeight: 240, maxHeight: 240, alignment: .center)
