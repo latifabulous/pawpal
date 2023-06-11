@@ -70,18 +70,17 @@ struct AnalysisResultScreen: View {
                         .padding(.bottom, 4)
                     
                     //hasil kebutuhan kucing
-                    Text ("Membutuhkan \(modelView.predictionResult)")
+                    Text ("\(JudulKebutuhan(selectedJudulKebutuhan: modelView.predictionResult).description)")
                         .font(.system(size: 34, weight: .semibold, design: .rounded))
                         .foregroundColor(Color("Neutral800"))
                         .frame(maxWidth: .infinity, alignment: .leading)
                     
                     //elaborasi kebutuhan
-                    Text("kondisi nya \(KondisiKebutuhan(selectedKebutuhan: modelView.predictionResult).description)")
+                    Text("\(KondisiKebutuhan(selectedKebutuhan: modelView.predictionResult).description)")
                         .font(.system(size: 17, weight: .regular, design: .rounded))
                         .foregroundColor(Color("Neutral800"))
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.vertical, 12)
-                        
                 }
                 
                 Color("Neutral200").frame(height: 4 / UIScreen.main.scale)
