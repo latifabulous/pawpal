@@ -7,14 +7,25 @@
 
 import SwiftUI
 
-struct LargeButton: View {
+struct ButtonActionView: View {
+    let label: String
+    let color: String
+    let action: () -> Void
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct LargeButton_Previews: PreviewProvider {
-    static var previews: some View {
-        LargeButton()
+        Button( action:{
+           action()
+        }) {
+                        
+            Text(label)
+                .font(.headline)
+                .fontWeight(.semibold)
+                .fontDesign(.rounded)
+                .foregroundColor(Color("neutral10"))
+                .background(Color("\(color)")
+                .cornerRadius(20)
+                .frame(width: 310, height: 56)
+            )
+           
+        }
     }
 }

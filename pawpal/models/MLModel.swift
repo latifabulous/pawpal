@@ -19,7 +19,7 @@ class ModelView: ObservableObject {
         return model
     }()
 
-    @Published var predictionResult = ""
+
 
     @Published var pupilInput: [Double] = [0, 0, 0]
     @Published var ekorInput: [Double] = [0, 0, 0, 0, 0]
@@ -27,6 +27,8 @@ class ModelView: ObservableObject {
     @Published var bentukBadanInput: [Double] = [0, 0, 0, 0, 0, 0, 0, 0]
     @Published var telingaInput: [Double] = [0, 0, 0, 0]
 
+    @Published var predictionResult = ""
+    
     @Published var selectedPupil: String = ""
     @Published var selectedEkor: String = ""
     @Published var selectedSuara: String = ""
@@ -36,6 +38,8 @@ class ModelView: ObservableObject {
     @Published var catImage: String = ""
     @Published var logNote: String = ""
     @Published var logDate: Date = Date()
+    
+//    @Published var catImage: Data?
     
     
     func predict() {
@@ -77,6 +81,7 @@ class ModelView: ObservableObject {
             predictionResult = "Error: \(error)"
         }
     }
+    
     
     func getPupilInput(pilihan: String) -> [Double] {
         switch pilihan {

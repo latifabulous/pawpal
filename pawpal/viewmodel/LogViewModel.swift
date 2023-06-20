@@ -6,30 +6,32 @@
 //
 
 import SwiftUI
+import CoreData
 
 class LogViewModel: ObservableObject {
-//    @Published var storedLog: [LogModel] = [
-//        LogModel(logDate: Date(), logNote: "apa", pupil: "Normal", telinga: "Tegal", suara: "Mendesis", ekor: "Terangkat tinggi dan gemetar", posisi_badan: "Berdiri Tegak", kebutuhan: "Marah", deskripsi: "Kucingmu marah cok"
-//        ),
-//        LogModel(logDate: .init(timeIntervalSince1970: currentTimeInterval), logNote: "apa", pupil: "Normal", telinga: "Tegal", suara: "Mendesis", ekor: "Terangkat tinggi dan gemetar", posisi_badan: "Berdiri Tegak", kebutuhan: "Marah", deskripsi: "Kucingmu marah babi"
-//        )
-//
-//    ]
+
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \PawLog.logDate, ascending: true)],
+        animation: .default)
+    private var items: FetchedResults<PawLog>
     
     // fetch current week days
     @Published var currentWeek: [Date] = []
     
     // current date
     @Published var currentDay: Date = Date()
-//    {
-//        didSet {
-//            filterTodayLog()
-//        }
-//    }
+
     
     // filter log untuk masing masing hari
     @Published var filteredLogs: [LogModel]? = []
     
+    
+    @Published var addNewLog: Bool = false
+    
+    @Published var editLog: PawLog?
+    
+//    @Published var logCountsByDay: [Date: Int] = [:]
     
     
     // initializing
@@ -56,6 +58,7 @@ class LogViewModel: ObservableObject {
 //            }
 //        }
 //    }
+    
     
     func fetchCurrentWeek() {
         let today = Date()
@@ -108,6 +111,9 @@ class LogViewModel: ObservableObject {
         
         return calendar.isDate(currentDay, inSameDayAs: date)
     }
+    
+
+
 }
 
 

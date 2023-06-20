@@ -9,18 +9,27 @@ import SwiftUI
 
 @main
 struct pawpalApp: App {
+    @ObservedObject var logModel: LogViewModel = LogViewModel()
     @StateObject var modelView = ModelView()
-
-    var body: some Scene {
-        WindowGroup {
-            Save()
-                .environmentObject(modelView)
-        }
-    }
+    let persistenceController = PersistenceController.shared
     
 //    var body: some Scene {
 //        WindowGroup {
-//            OnboardingScreen()
+//            Save()
+//                .environmentObject(modelView)
+//                .environmentObject(logModel)
 //        }
 //    }
+    
+
+
+    var body: some Scene {
+        WindowGroup {
+            OnboardingScreen()
+//            OnboardingView()
+                .preferredColorScheme(.light)
+//            LogView()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+        }
+    }
 }

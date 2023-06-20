@@ -14,11 +14,16 @@ struct DismissButton: View {
         Button(action: {
             isPopoverVisible = false
         }) {
-            Text("Save")
-                .padding()
-                .background(Color.green)
-                .foregroundColor(.white)
-                .cornerRadius(10)
+            Text("Selanjutnya")
+                .font(.headline)
+                .fontWeight(.semibold)
+                .fontDesign(.rounded)
+                .foregroundColor(Color("neutral10"))
+                .background(Color("orange600")
+                .cornerRadius(20)
+                .frame(width: 310, height: 56)
+
+            )
         }
     }
 }

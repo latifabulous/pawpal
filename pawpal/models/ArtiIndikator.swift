@@ -29,11 +29,11 @@ enum KondisiPupil: CustomStringConvertible {
     var description: String {
         switch self {
         case .besar:
-            return "1Pupil yang terpilih adalah besar yang bulat"
+            return "Pupil kucing melebar menunjukkan adanya emosi yang intens yang dapat mengindikasikan kegembiraan, ketakutan atau keterancaman."
         case .normal:
-            return "2Pupil yang terpilih menandakan kasih sayang"
+            return "Pupil kucing dalam ukuran normal menunjukkan kondisi yang netral atau rileks, tidak ada rangsangan signifikan yang mempengaruhi kucing."
         case .kecil:
-            return "3Pupil ini menandakan kesakitan"
+            return "Pupil kucing yang kecil biasanya mengindikasikan perasaan takut, cemas, atau ancaman yang dirasakan oleh kucing."
         }
     }
 }
@@ -65,15 +65,15 @@ enum KondisiEkor: CustomStringConvertible {
     var description: String {
         switch self {
         case .bergetar:
-            return "1Ekor yang terpilih adalah panjang"
+            return "Gerakan ekor yang bergetar dengan cepat menandakan kegembiraan dan antusiasme. Kucing mungkin sedang dalam mood siap berinteraksi."
         case .menggoyang:
-            return "2Ekor yang terpilih adalah pendek"
+            return "Gerakan ekor yang menggoyangkan dengan cepat menunjukkan kegembiraan atau rasa ingin tahu saat merasa senang atau sedang mempelajari sesuatu dengan seksama."
         case .mengibas:
-            return "3Ekor ada ekor yang terpilih"
+            return "Gerakan ekor yang mengibas-ibaskan secara cepat dan agak liar dapat menandakan ketidakpuasan atau ketegangan. Kucing mungkin sedang merasa frustrasi atau marah."
         case .mengibasTenang:
-            return "4Ekor yang terpilih adalah panjang"
+            return "Gerakan ekor yang mengibas perlahan menunjukkan ketenangan dan kepuasan. Kucing mungkin sedang merasa rileks dan nyaman."
         case .terangkat:
-            return "5Ekor yang terpilih adalah pendek"
+            return "Ekor yang terangkat tinggi dan gemetar adalah tanda peringatan atau agresi. Kucing mungkin merasa terancam, dan siap untuk bertindak."
         }
     }
 }
@@ -102,13 +102,13 @@ enum KondisiSuara: CustomStringConvertible {
     var description: String {
         switch self {
         case .mendesis:
-            return "1Suara yang terpilih adalah besar yang bulat"
+            return "Mendesis menunjukkan perasaan ketidaknyamanan, peringatan, atau ancaman saat kucing merasa terganggu atau ingin menjaga jarak."
         case .mengeong:
-            return "2Suara yang terpilih menandakan kasih sayang"
+            return "Mengeong dapat menandakan berbagai perasaan dan kebutuhan, seperti rasa lapar, ingin perhatian, atau ingin keluar."
         case .menggeram:
-            return "3Suara ini menandakan kesakitan"
+            return "Menggeram menandakan perasaan agresif saat kucing merasa terancam atau ingin melindungi wilayahnya."
         case .tidakBersuara:
-            return "4Suara ini menandakan kesakitan"
+            return "Kucing dapat tidak suara yang terjadi saat mereka sedang mengamati atau dalam keadaan rileks"
         }
     }
 }
@@ -149,21 +149,21 @@ enum KondisiBentukBadan: CustomStringConvertible {
     var description: String {
         switch self {
         case .melengkungBawah:
-            return "1Badan yang terpilih adalah besar yang bulat"
+            return "Posisi badan melengkung ke bawah menandakan ketidaknyamanan atau kecemasan. Kucing mungkin sedang mencari perlindungan atau menyembunyikan diri."
         case .menukikAtas:
-            return "2Badan yang terpilih menandakan kasih sayang"
+            return "Posisi badan menukik ke atas dapat menunjukkan kegembiraan atau keterancaman. Kucing mungkin sedang dalam suasana hati yang intens."
         case .baringMelingkar:
-            return "3Badan ini menandakan kesakitan"
+            return "Posisi berbaring melingkar menandakan rasa nyaman dan kepuasan. Kucing mungkin sedang tidur atau beristirahat dengan baik."
         case .baringSamping:
-            return "4Badan yang terpilih adalah besar yang bulat"
+            return "Posisi berbaring menyamping menunjukkan perasaan nyaman, relaksasi, atau kepercayaan. Kucing mungkin sedang merasa santai."
         case .baringTerlentang:
-            return "5Badan yang terpilih menandakan kasih sayang"
+            return "Posisi berbaring terlentang menunjukkan kepercayaan diri dan rasa nyaman yang tinggi. Kucing merasa aman dalam lingkungan beserta orang di sekitarnya."
         case .berdiri:
-            return "6Badan ini menandakan kesakitan"
+            return "Posisi berdiri tegak menunjukkan kewaspadaan atau ketertarikan. Kucing mungkin sedang mengamati dengan seksama atau siap untuk bereaksi terhadap rangsangan."
         case .berjongkok:
-            return "7Badan yang terpilih adalah besar yang bulat"
+            return "Posisi berjongkok menandakan kesiapan untuk bertindak atau perasaan yang intens. Kucing mungkin sedang merasa ketakutan atau mempersiapkan diri untuk melompat."
         case .duduk:
-            return "8Badan yang terpilih menandakan kasih sayang"
+            return "Posisi duduk tegak menunjukkan kepercayaan diri, kenyamanan, atau ketenangan. Kucing sedang dalam kondisi yang rileks."
         }
     }
 }
@@ -192,13 +192,13 @@ enum KondisiTelinga: CustomStringConvertible {
     var description: String {
         switch self {
         case .menutupDepan:
-            return "1Telinga yang terpilih adalah besar yang bulat"
+            return "Telinga kucing tertutup ke depan bisa menunjukkan rasa ketakutan, kecemasan, atau kewaspadaan saat menghadapi situasi menegangkan."
         case .miringSamping:
-            return "2Telinga yang terpilih menandakan kasih sayang"
+            return "Telinga kucing miring ke samping, sering menunjukkan ketertarikan pada suatu objek atau suara saat sedang mengamati sesuatu."
         case .tegak:
-            return "3Telinga ini menandakan kesakitan"
+            return "Telinga kucing yang tertarik ke belakang sering menandakan perasaan takut, kecurigaan, atau kesiapan untuk bertahan."
         case .tertarikBelakang:
-            return "4Telinga ini menandakan kesakitan"
+            return "Telinga kucing yang tegak mengindikasikan perasaan rileks, kepercayaan, atau perhatian yang normal saat kucing dalam kondisi nyaman."
         }
     }
 }
@@ -234,17 +234,62 @@ enum KondisiKebutuhan: CustomStringConvertible {
     var description: String {
         switch self {
         case .marah:
-            return "1Kebutuhan yang terpilih adalah besar yang bulat"
+            return "Kucing kamu terlihat sedikit kesal dan marah. Mungkin lebih baik memberikan mereka sedikit ruang dan menghindari mengganggu mereka."
         case .bosan:
-            return "2Kebutuhan yang terpilih menandakan kasih sayang"
+            return "Kucing kamu terlihat sedang bosan. Mengajak mereka bermain atau memberikan mainan interaktif bisa menjadi solusi yang baik."
         case .lapar:
-            return "3Kebutuhan ini menandakan kesakitan"
+            return "Kucing kamu tampak lapar dan membutuhkan makanan. Pastikan mereka memiliki akses ke makanan yang segar dan sesuai dengan diet mereka."
         case .butuhPerhatian:
-            return "4Kebutuhan yang terpilih adalah besar yang bulat"
+            return "Kucing kamu mencoba menarik perhatianmu. Berikan sedikit waktu dan kasih sayang untuk memenuhi kebutuhan sosial mereka."
         case .sakit:
-            return "5Kebutuhan yang terpilih menandakan kasih sayang"
+            return "Kucing kamu tampak tidak enak badan atau kurang bertenaga. Mungkin perlu untuk memeriksakan kesehatannya ke dokter hewan."
         case .takut:
-            return "6Kebutuhan ini menandakan kesakitan"
+            return "Kucing kamu sedang merasa takut atau cemas. Cobalah untuk melihat ke sekitar untuk mencari tau penyebab ketakutan agar mereka merasa aman."
+        }
+    }
+}
+
+enum JudulKebutuhan: CustomStringConvertible {
+    case marah
+    case bosan
+    case lapar
+    case butuhPerhatian
+    case sakit
+    case takut
+    
+    init(selectedJudulKebutuhan: String) {
+        switch selectedJudulKebutuhan {
+        case "Marah":
+            self = .marah
+        case "Bosan":
+            self = .bosan
+        case "Lapar":
+            self = .lapar
+        case "Butuh perhatian":
+            self = .butuhPerhatian
+        case "Sakit":
+            self = .sakit
+        case "Takut":
+            self = .takut
+        default:
+            self = .takut
+        }
+    }
+    
+    var description: String {
+        switch self {
+        case .marah:
+            return "Membutuhkan ruang"
+        case .bosan:
+            return "Membutuhkan hiburan"
+        case .lapar:
+            return "Membutuhkan makanan"
+        case .butuhPerhatian:
+            return "Membutuhkan perhatian"
+        case .sakit:
+            return "Membutuhkan perawatan"
+        case .takut:
+            return "Membutuhkan rasa aman"
         }
     }
 }
