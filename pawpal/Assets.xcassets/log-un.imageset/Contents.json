@@ -1,11 +1,12 @@
 {
   "images" : [
     {
-      "filename" : "8DF93FCA-4D37-43F0-B533-FE2D5E886CE9.png",
+      "filename" : "log-un.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "log-un2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

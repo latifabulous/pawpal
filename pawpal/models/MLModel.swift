@@ -9,7 +9,16 @@ import SwiftUI
 import CoreML
 
 class ModelView: ObservableObject {
-    let model = pawpal()
+//    let model = pawpal()
+    
+    lazy var model: pawpal = {
+        let configuration = MLModelConfiguration()
+        guard let model = try? pawpal(configuration: configuration) else {
+            fatalError("Failed to initialize the model.")
+        }
+        return model
+    }()
+
     @Published var predictionResult = ""
 
     @Published var pupilInput: [Double] = [0, 0, 0]
@@ -23,7 +32,12 @@ class ModelView: ObservableObject {
     @Published var selectedSuara: String = ""
     @Published var selectedBentukBadan: String = ""
     @Published var selectedTelinga: String = ""
-
+    
+    @Published var catImage: String = ""
+    @Published var logNote: String = ""
+    @Published var logDate: Date = Date()
+    
+    
     func predict() {
         do {
             let input = try MLMultiArray(shape: [24], dataType: .double)
