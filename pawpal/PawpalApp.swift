@@ -13,22 +13,10 @@ struct pawpalApp: App {
     @StateObject var modelView = ModelView()
     let persistenceController = PersistenceController.shared
     
-//    var body: some Scene {
-//        WindowGroup {
-//            Save()
-//                .environmentObject(modelView)
-//                .environmentObject(logModel)
-//        }
-//    }
-    
-
-
     var body: some Scene {
         WindowGroup {
-            OnboardingScreen()
-//            OnboardingView()
+            HasCompletedOnboarding()
                 .preferredColorScheme(.light)
-//            LogView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

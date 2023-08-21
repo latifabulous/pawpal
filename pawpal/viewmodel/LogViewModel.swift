@@ -31,34 +31,12 @@ class LogViewModel: ObservableObject {
     
     @Published var editLog: PawLog?
     
-//    @Published var logCountsByDay: [Date: Int] = [:]
     
     
     // initializing
     init() {
         fetchCurrentWeek()
-//        filterTodayLog()
     }
-
-//    func filterTodayLog() {
-//        DispatchQueue.global(qos: .userInteractive).async {
-//            let calendar = Calendar.current
-//            let filtered = self.storedLog.filter { log in
-////                return calendar.isDate(log.logDate, inSameDayAs: Date())
-//
-//                return calendar.isDate(log.logDate, inSameDayAs: self.currentDay)
-//            }
-//
-////            self.filteredLogs = filtered
-//
-//            DispatchQueue.main.async {
-//                withAnimation(){
-//                    self.filteredLogs = filtered
-//                }
-//            }
-//        }
-//    }
-    
     
     func fetchCurrentWeek() {
         let today = Date()
@@ -112,8 +90,6 @@ class LogViewModel: ObservableObject {
         return calendar.isDate(currentDay, inSameDayAs: date)
     }
     
-
-
 }
 
 

@@ -20,7 +20,6 @@ class ModelView: ObservableObject {
     }()
 
 
-
     @Published var pupilInput: [Double] = [0, 0, 0]
     @Published var ekorInput: [Double] = [0, 0, 0, 0, 0]
     @Published var suaraInput: [Double] = [0, 0, 0]
@@ -38,8 +37,6 @@ class ModelView: ObservableObject {
     @Published var catImage: String = ""
     @Published var logNote: String = ""
     @Published var logDate: Date = Date()
-    
-//    @Published var catImage: Data?
     
     
     func predict() {
